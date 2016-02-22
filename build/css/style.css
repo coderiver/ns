@@ -84,12 +84,14 @@ input::placeholder { color: #2a2a33; }
 
 .help-block { display: none; }
 
-@media only screen and (max-width: 1460px), (min-height: 700px){
- .motto{ max-width: 700px; font-size: 45px; } }
+@media only screen and (max-width: 1460px), (min-height: 780px){
+ .motto{ max-width: 700px; font-size: 45px; }
+ .form{ padding: 20px 38px 7px; top: -100px; margin-bottom: -100px; } }
 
-@media only screen and (max-width: 1020px), (max-height: 700px){
+@media only screen and (max-width: 1020px), (max-height: 768px){
  .motto{ display: inline-block; font-size: 35px; }
- .motto__in{ padding: 18px 30px; } }
+ .motto__in{ padding: 18px 30px; }
+ input{ padding: 7px 15px; } }
 
 @media only screen and (max-width: 1020px), (max-height: 500px){
  .footer{ position: relative; }
@@ -100,9 +102,10 @@ input::placeholder { color: #2a2a33; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
 
-@media only screen and (max-width: 1360px){
+@media only screen and (max-width: 1380px){
  .footer__in{ table-layout: auto; }
  .footer__bl{ padding: 0 20px; }
+ .logo{ max-width: 250px; margin: 30px auto 0; }
  .counter{ width: 408px; padding-bottom: 40px; }
  .counter__ttl{ font-size: 28px; }
  .flip-clock-wrapper ul{ width: 40px; height: 52px; font-size: 40px; line-height: 52px; }
@@ -123,7 +126,7 @@ input::placeholder { color: #2a2a33; }
 @media only screen and (max-width: 1000px){
  .out{ height: auto; } }
 
-@media only screen and (max-height: 700px){
+@media only screen and (max-height: 800px){
  .footer{ padding: 15px 0; } }
 
 @media only screen and (max-width: 650px){
