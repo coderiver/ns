@@ -56,7 +56,7 @@ body
 	background-size: cover
 	background-position: top center
 	+r(1020)
-		height: 800px
+		height: 100vh
 		padding: 0 10px
 		background-position: 70% 50%
 		+vertical
@@ -72,10 +72,13 @@ body
 		color: #FFF
 	span
 		color: #ffb100
-	+r(1460)
+	+rmh2
 		max-width: 700px
 		font-size: 45px
-	+rmh
+	+r(1020)
+		padding-top: 0
+		vertical-align: middle
+	+rmh1
 		display: inline-block
 		font-size: 35px
 		&__in
@@ -101,8 +104,15 @@ body
 		display: table-cell
 		text-align: center
 		vertical-align: top
-	+rh(1000)
+	+r(1360)
+		&__in
+			table-layout: auto
+		&__bl
+			padding: 0 20px
+	+rh(1020)
 		padding: 30px 0
+	+rh(700)
+		padding: 15px 0
 	+rmh
 		position: relative
 		&__in,
@@ -110,6 +120,10 @@ body
 			display: block
 		&__bl
 			margin-bottom: 30px
+	+r(480)
+		&__bl
+			padding: 0 10px
+
 .logo
 	display: block
 	margin-top: 30px
@@ -117,13 +131,21 @@ body
 		max-width: 100%
 
 .counter
-	//width: 490px
+	width: 500px
 	margin: 0 auto
 	&__ttl
 		font-size: 36px
 		text-transform: uppercase
 		letter-spacing: 0.05em
 		color: #FFF
+	+r(1360)
+		width: 408px
+		padding-bottom: 40px
+		&__ttl
+			font-size: 28px
+	+r(480)
+		width: 290px
+
 
 .form
 	position: relative
@@ -169,6 +191,7 @@ input
 	font-size: 16px
 	color: #2a2a33
 	background: #D1D1D4
+	border: 1px solid transparent
 	+fl
 	+placeholder
 		color: #2a2a33
@@ -176,6 +199,7 @@ input
 
 .flip-clock-wrapper
 	margin: 20px 0 0
+	padding-top: 15px
 	background-color: rgba(0, 0, 0, 0.1)
 	box-shadow: 0 1px 2px rgba(255, 255, 255, 0.4), inset 0 1px 2px #000
 	border-radius: 9px
@@ -185,6 +209,7 @@ input
 		margin: 0 2px
 		font-size: 52px
 		line-height: 64px
+		border-radius: 5px
 		li
 			line-height: 64px
 			a div div.inn
@@ -192,8 +217,33 @@ input
 				font-size: 52px
 				background-color: #36363e
 				color: #BBBCC1
+				background: url(../img/flip.png) center center repeat
 			a div.up:after
-				top: 28px
+				top: 29px
+				height: 2px
+	+r(1360)
+		ul
+			width: 40px
+			height: 52px
+			font-size: 40px
+			line-height: 52px
+			li
+				line-height: 52px
+				a div div.inn
+					font-size: 40px
+				a div.up:after
+					top: 24px
+	+r(480)
+		ul
+			width: 28px
+			height: 42px
+			line-height: 42px
+			li
+				line-height: 42px
+				a div div.inn
+					font-size: 30px
+				a div.up:after
+					top: 18px
 
 .flip-clock-dot.top,
 .flip-clock-dot.bottom
@@ -201,12 +251,56 @@ input
 
 .flip-clock-divider
 	width: 10px
+	height: 80px
 	&:first-child
-		width: 10px
+		width: 13px
 	.flip-clock-label
 		top: 100%
-		margin-top: 17px
+		width: 130px
+		left: 0
+		right: auto
+		text-align: center
 		text-transform: capitalize
+		margin-top: 17px
 		font-size: 16px
 		color: #f49e00
 		+fl
+	+r(1360)
+		height: 70px
+		.flip-clock-label
+			width: 106px
+	+r(480)
+		width: 5px
+		height: 60px
+		&:first-child
+			width: 9px
+		.flip-clock-label
+			width: 70px
+			font-size: 14px
+
+
+.popup
+	display: none
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	padding: 0 15px
+	background: rgba(#000, 0.6)
+	overflow: hidden
+	white-space: nowrap
+	z-index: 10
+	+vertical
+	&__in
+		display: inline-block
+		width: 100%
+		max-width: 450px
+		padding: 100px 20px
+		font-size: 25px
+		background: #FFF
+		vertical-align: middle
+		white-space: normal
+
+.help-block
+	display: none
